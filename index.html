@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Master Black Electricals | Certified Electrician in Kumasi</title>
+    <meta name="description" content="Professional electrician in Kumasi providing reliable electrical services in Agric Junction. House wiring, fault detection, repairs, and installation services.">
+    <meta name="keywords" content="Electrician in Kumasi, Electrical services in Kumasi, Agric Junction electrician, Ghana electrician">
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0d3b8c;
+            --accent-yellow: #ffc107;
+            --light-blue: #e3f2fd;
+            --dark-gray: #333;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            padding-top: 76px; /* Offset for fixed navbar */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-blue) !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark-gray) !important;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(13, 59, 140, 0.9), rgba(13, 59, 140, 0.8)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-call {
+            background-color: var(--accent-yellow);
+            color: var(--dark-gray);
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            margin: 0.5rem;
+            border-radius: 50px;
+            border: none;
+        }
+        
+        .btn-call:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            margin: 0.5rem;
+            border-radius: 50px;
+            border: none;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background-color: var(--light-gray);
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-yellow);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .gallery-item {
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: var(--light-blue);
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #1da851;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        /* Placeholder styles for images/videos */
+        .placeholder-img {
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: 500;
+            height: 100%;
+            min-height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-bolt text-warning me-2"></i>Master Black Electricals
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1>Certified Electrician in Kumasi</h1>
+                    <p>Professional, reliable electrical services in Agric Junction and surrounding areas. Fully licensed and insured with over 10 years of experience serving homes and businesses in Kumasi.</p>
+                    <div>
+                        <a href="tel:0249426811" class="btn btn-call">
+                            <i class="fas fa-phone-alt me-2"></i> Call Now: 0249426811
+                        </a>
+                        <a href="https://wa.me/233249426811?text=Hello, I need electrical services from Master Black Electricals." target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp me-2"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Electrical Services</h2>
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>House Wiring</h4>
+                        <p>Complete electrical wiring for residential buildings, ensuring safety and compliance with Ghanaian electrical standards.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Electrical Fault Detection</h4>
+                        <p>Advanced diagnostic services to identify and resolve electrical faults, short circuits, and power issues efficiently.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Repairs & Maintenance</h4>
+                        <p>Regular maintenance and repair services for electrical systems to prevent failures and ensure optimal performance.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4>Socket & Switch Installation</h4>
+                        <p>Professional installation of electrical sockets, switches, and outlets with attention to safety and convenience.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Meter Installation</h4>
+                        <p>Correct installation of electricity meters, ensuring accurate readings and compliance with ECG requirements.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Lighting Solutions</h4>
+                        <p>Installation of indoor and outdoor lighting systems, energy-efficient solutions, and lighting design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Previous Work</h2>
+            <p class="text-center mb-5">Here are some examples of our completed electrical projects in Kumasi and surrounding areas.</p>
+            
+            <div class="row">
+                <!-- Image 1 - Replace with actual image -->
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <div class="placeholder-img">
+                            House Wiring Project
+                        </div>
+                        <!-- Replace with: <img src="images/project1.jpg" class="gallery-img" alt="House wiring project"> -->
+                    </div>
+                </div>
+                
+                <!-- Image 2 - Replace with actual image -->
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <div class="placeholder-img">
+                            Electrical Panel Installation
+                        </div>
+                        <!-- Replace with: <img src="images/project2.jpg" class="gallery-img" alt="Electrical panel installation"> -->
+                    </div>
+                </div>
+                
+                <!-- Image 3 - Replace with actual image -->
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <div class="placeholder-img">
+                            Commercial Wiring
+                        </div>
+                        <!-- Replace with: <img src="images/project3.jpg" class="gallery-img" alt="Commercial wiring"> -->
+                    </div>
+                </div>
+                
+                <!-- Video placeholder 1 -->
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <div class="placeholder-img">
+                            <i class="fas fa-video me-2"></i> Video: Fault Detection Process
+                        </div>
+                        <!-- Replace with: <video controls class="gallery-img"><source src="videos/fault-detection.mp4" type="video/mp4"></video> -->
+                    </div>
+                </div>
+                
+                <!-- Video placeholder 2 -->
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <div class="placeholder-img">
+                            <i class="fas fa-video me-2"></i> Video: Meter Installation
+                        </div>
+                        <!-- Replace with: <video controls class="gallery-img"><source src="videos/meter-installation.mp4" type="video/mp4"></video> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="text-center mb-5">Get in touch for reliable electrical services in Kumasi Agric Junction and surrounding areas.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Phone & WhatsApp</h4>
+                        <p><strong>0249426811</strong></p>
+                        <p>Available 7:00 AM - 8:00 PM</p>
+                        <a href="tel:0249426811" class="btn btn-call mt-2">Call Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p><strong>Kumasi, Agric Junction</strong></p>
+                        <p>We serve Kumasi and surrounding areas</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Working Hours</h4>
+                        <p><strong>Monday - Saturday:</strong> 7:00 AM - 8:00 PM</p>
+                        <p><strong>Sunday:</strong> Emergency services only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start">
+                    <h4><i class="fas fa-bolt text-warning me-2"></i>Master Black Electricals</h4>
+                    <p>Certified electrician providing reliable electrical services in Kumasi, Ghana.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <p>© <span id="currentYear"></span> Master Black Electricals. All rights reserved.</p>
+                    <p>Kumasi, Agric Junction | 0249426811</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/233249426811?text=Hello, I need electrical services from Master Black Electricals." target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add active class to nav links on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Simple form validation for contact form (if added in the future)
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            
+            if(name.trim() === '' || phone.trim() === '') {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Initialize tooltips (if using Bootstrap tooltips)
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html>
